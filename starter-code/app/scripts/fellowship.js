@@ -21,13 +21,12 @@ var body = document.querySelector('body');
 
 
 // Part 1
-
+// create a section tag with an id of middle-earth
+// add each land as an article tag
+// inside each article tag include an h1 with the name of the land
+// append middle-earth to your document body
 
 function makeMiddleEarth() {
-  // create a section tag with an id of middle-earth
-  // add each land as an article tag
-  // inside each article tag include an h1 with the name of the land
-  // append middle-earth to your document body
 var middleEarth = document.createElement('section')
 middleEarth.id = 'middle-earth'
 
@@ -45,15 +44,14 @@ makeMiddleEarth();
 
 
 // Part 2
+// display an unordered list of hobbits in the shire (which is the second article tag on the page)
+// give each hobbit a class of hobbit
 
 function makeHobbits() {
-  // display an unordered list of hobbits in the shire (which is the second article tag on the page)
-  // give each hobbit a class of hobbit
   var theShire = body.querySelector('article')
   var hobbitList = document.createElement('ul')
 
   hobbits.forEach(function(hobbitName) {
-
     var hobbitLi = document.createElement('li')
     hobbitLi.className = 'hobbit'
     hobbitLi.textContent = hobbitName
@@ -61,21 +59,18 @@ function makeHobbits() {
   })
     theShire.appendChild(hobbitList)
 }
-
 makeHobbits()
 
-
 // Part 3
+// create a div with an id of 'the-ring'
+// give the div a class of 'magic-imbued-jewelry'
+// add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
+// add the ring as a child of Frodo
 
 function keepItSecretKeepItSafe() {
-  // create a div with an id of 'the-ring'
-  // give the div a class of 'magic-imbued-jewelry'
-  // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
-  // add the ring as a child of Frodo
     var theShire = body.querySelector('article')
     var hobbitList = theShire.querySelector('ul')
     var frodo = hobbitList.querySelector('li')
-
     var ring = document.createElement('div')
     ring.id = 'the-ring'
     ring.className = 'magic-imbued-jewelry'
@@ -84,16 +79,15 @@ function keepItSecretKeepItSafe() {
 }
 keepItSecretKeepItSafe()
 // Part 4
+// create an aside tag
+// attach an unordered list of the 'buddies' in the aside
+// insert your aside as a child element of rivendell
 
 function makeBuddies() {
-  // create an aside tag
-  // attach an unordered list of the 'buddies' in the aside
-  // insert your aside as a child element of rivendell
-
   var rivendell = body.querySelector('article')
   var aside = document.createElement('aside')
-  // attach an unordered list of the 'buddies' in the aside
   var buddiesList = document.createElement('ul')
+
   buddies.forEach(function (name) {
     var buddyName = document.createElement('li')
     buddyName.textContent = name
@@ -101,7 +95,6 @@ function makeBuddies() {
   })
   aside.appendChild(buddiesList)
   rivendell.appendChild(aside)
-  // insert your aside as a child element of rivendell
 }
 
 makeBuddies()
